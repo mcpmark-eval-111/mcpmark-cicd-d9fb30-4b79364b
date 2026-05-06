@@ -1,19 +1,19 @@
 ---
 name: Feature Request
-about: Suggest an idea or epic feature for this project
-title: ''
-labels: enhancement, needs-triage
+about: Suggest a new feature or enhancement for the project
+title: "Epic: "
+labels: ''
 assignees: ''
 ---
 
 ## Feature Description
-A clear and concise description of what you want to happen.
+A clear and concise description of the feature you'd like to see implemented.
 
 ## Problem Statement
-Is your feature request related to a problem? Please describe.
+Describe the problem this feature would solve. Ex. I'm always frustrated when [...]
 
 ## Proposed Solution
-A clear and concise description of what you'd like.
+A clear and concise description of what you want to happen.
 
 ## Alternatives Considered
 A clear and concise description of any alternative solutions or features you've considered.
@@ -24,4 +24,9 @@ A clear and concise description of any alternative solutions or features you've 
 - [ ] Criterion 3
 
 ## Additional Context
-Add any other context or screenshots about the feature request here.
+Add any other context, mockups, or screenshots about the feature request here.
+
+## Priority Assessment
+- [ ] This is critical for the product (high priority)
+- [ ] This is important but not urgent (medium priority)
+- [ ] This would be nice to have (low priority)
