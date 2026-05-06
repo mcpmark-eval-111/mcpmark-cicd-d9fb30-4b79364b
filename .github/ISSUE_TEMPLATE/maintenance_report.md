@@ -1,70 +1,33 @@
 ---
 name: Maintenance Report
-about: Report maintenance or housekeeping tasks
-title: 'Maintenance: '
-labels: maintenance
+about: Report maintenance tasks and housekeeping items
+title: ''
+labels: maintenance, needs-triage
 assignees: ''
 ---
 
-## Maintenance Task Description
+## Maintenance Task
+A clear description of the maintenance task needed.
 
-A clear and concise description of the maintenance task.
+## Scope
+Describe the scope and areas affected by this maintenance task.
 
-## Category
+## Justification
+Why is this maintenance task needed? What problems does it prevent or solve?
 
-- [ ] Code Refactoring
-- [ ] Dependency Updates
-- [ ] Performance Optimization
-- [ ] Technical Debt
-- [ ] Documentation Update
-- [ ] Infrastructure/DevOps
-- [ ] Security Patch
-- [ ] Cleanup/Housekeeping
+## Steps Required
+1. Step 1
+2. Step 2
+3. Step 3
 
-## Current State
+## Impact Assessment
+- **Risk Level**: [Low/Medium/High]
+- **Downtime Required**: [Yes/No]
+- **Affected Services**: [List services]
 
-Describe the current state that needs maintenance:
-
-## Desired State
-
-Describe what the desired state should be after maintenance:
-
-## Impact of Not Addressing
-
-What happens if this maintenance task is not addressed?
-
-- **Performance Impact**: [describe]
-- **Security Impact**: [describe]
-- **Developer Experience**: [describe]
-
-## Affected Areas
-
-List the files, modules, or systems affected:
-
-- Area 1
-- Area 2
-
-## Dependencies
-
-List any dependencies or blockers:
-
-- [ ] Dependency 1
-- [ ] Dependency 2
-
-## Estimated Effort
-
-- [ ] Small (< 1 day)
-- [ ] Medium (1-3 days)
-- [ ] Large (3-5 days)
-- [ ] Extra Large (> 5 days)
-
-## Priority
-
-- [ ] Critical - System stability at risk
-- [ ] High - Should be done this sprint
-- [ ] Medium - Plan for next sprint
-- [ ] Low - Backlog item
+## Timeline
+- **Estimated Duration**: [e.g., 2 hours]
+- **Preferred Window**: [e.g., Weekend maintenance window]
 
 ## Additional Context
-
 Add any other context about the maintenance task here.
