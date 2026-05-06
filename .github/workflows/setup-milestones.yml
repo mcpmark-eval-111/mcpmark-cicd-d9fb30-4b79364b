@@ -1,0 +1,63 @@
+name: Setup Milestones
+
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  setup-milestones:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create milestone and assign to issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            // Create milestone v1.0.0
+            let milestoneNumber;
+            try {
+              const milestones = await github.rest.issues.listMilestones({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open'
+              });
+              const existing = milestones.data.find(m => m.title === 'v1.0.0');
+              if (existing) {
+                milestoneNumber = existing.number;
+              } else {
+                const created = await github.rest.issues.createMilestone({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  title: 'v1.0.0',
+                  description: 'Version 1.0.0 release milestone'
+                });
+                milestoneNumber = created.data.number;
+              }
+            } catch (e) {
+              const created = await github.rest.issues.createMilestone({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: 'v1.0.0',
+                description: 'Version 1.0.0 release milestone'
+              });
+              milestoneNumber = created.data.number;
+            }
+            
+            // Set milestone on issue #2 (bug - priority-high)
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: 2,
+              milestone: milestoneNumber
+            });
+            
+            // Set milestone on issue #3 (epic - priority-high)
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: 3,
+              milestone: milestoneNumber
+            });
+            
+            console.log(`Milestone v1.0.0 (number: ${milestoneNumber}) set on issues #2 and #3`);
